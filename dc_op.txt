@@ -1,0 +1,45 @@
+Net Voltages:
+gnd! 0V
+net1 8.0V
+voutp 32.0V
+vref -16.0V
+vcc2 4.0V
+vcvs_out 8.0V
+vccs_out -0.08V
+ccvs_out 3.97V
+ccvs_ref 1.985e-20V
+ccvs_ref_out 1.985e-20V
+
+
+Terminal Currents:
+Device_type TERM NET Current(A)
+cap C1.a vcc2 4e-20A 
+cap C1.b gnd! -4e-20A
+res R1.a voutp 3.2A 
+res R1.b gnd! -3.2A
+res R2.a net1 1.6A 
+res R2.b gnd! -1.6A
+res R3.a vref -3.2A 
+res R3.b gnd! 3.2A
+vsrc V2.plus vcc2 -1.6A 
+vsrc V2.minus gnd! 1.6A
+vcvs E1.outp vcvs_out -0.008A 
+vcvs E1.outm gnd! 0.008A
+res R4.a vcvs_out 0.008A 
+res R4.b gnd! -0.008A
+vccs G1.cin vccs_out -8.0A 
+vccs G1.cout gnd! 8.0A
+res R5.a vccs_out -8.0A 
+res R5.b gnd! 8.0A
+isrc I1.cin gnd! -1.985A 
+isrc I1.cout ccvs_ref 1.985A
+ccvs Z1.outp ccvs_out -0.0039700000000000004A 
+ccvs Z1.outm gnd! 0.0039700000000000004A
+res R6.a ccvs_out 0.0039700000000000004A 
+res R6.b gnd! -0.0039700000000000004A
+ind L1.a ccvs_ref_out 1.985A 
+ind L1.b gnd! -1.985A
+vsrc V1.plus net1 -1.6A 
+vsrc V1.minus vcc2 1.6A
+cccs F1.cin voutp -3.2A 
+cccs F1.cout vref 3.2A
